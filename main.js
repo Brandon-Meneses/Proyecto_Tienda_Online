@@ -6,10 +6,9 @@ const mobileMenu = document.querySelector('.mobile-menu');
 navMail.addEventListener('click', toggleDesktopMenu);
 menuHamIcon.addEventListener('click', toggleMobileMenu);
 
-function toggleMobileMenu(){
-    mobileMenu.classList.toggle('inactive');
-}
 function toggleDesktopMenu(){
     desktopMenu.classList.toggle('inactive');
 }
-console.log('JS Funcionando');
+function toggleMobileMenu(){
+    mobileMenu.classList.toggle('inactive');
+}
