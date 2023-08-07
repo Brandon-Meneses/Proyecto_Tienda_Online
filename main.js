@@ -12,26 +12,29 @@ menuCarritoIcon.addEventListener('click', toggleCarritoAside);
 
 
 function toggleDesktopMenu(){
+    const isAsideClosed = aside.classList.toggle('inactive');
+    if(!isAsideClosed)
+    {
+        aside.classList.add('inactive');
+    }
+    mobileMenu.classList.toggle('inactive');
+
     desktopMenu.classList.toggle('inactive');
 }
 function toggleMobileMenu(){
+    const isAsideClosed = aside.classList.toggle('inactive');
+    if(!isAsideClosed)
+    {
+        aside.classList.add('inactive');
+    }
     mobileMenu.classList.toggle('inactive');
 }
 function toggleCarritoAside(){
-    const ismobileMenuClosed = mobileMenu.classList.contains('inactive');
-    const isAsideClosed = aside.classList.contains('inactive');
+    const isMobileMenuClosed = mobileMenu.classList.contains('inactive');
 
-    if(!ismobileMenuClosed){
+    if(!isMobileMenuClosed){
         mobileMenu.classList.add('inactive');
     }
-    if(isAsideClosed){
-        //abrir el aside
-       
-    }
-    else{
-        aside.classList.add('inactive');
-    }
-    /*aside.classList.toggle('inactive');*/
-    if(mobileMenu.classList.contains('inactive'));
+    aside.classList.toggle('inactive');
 
 }
